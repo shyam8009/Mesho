@@ -6,6 +6,7 @@ import { useCart } from '../context/CartContext';
 import { useSearch } from '../context/SearchContext';
 import { truncate } from '../lib/text';
 import BannerCarousel from '../components/BannerCarousel';
+import HeroVideoBanner from '../components/HeroVideoBanner';
 
 const SUGGESTIONS = ['Atta', 'Rice', 'Oil', 'Ghee', 'Dry Fruits', 'Almonds', 'Cashews', 'Sugar', 'Tea', 'Cleaning', 'Personal Care'];
 
@@ -151,6 +152,7 @@ const Shop = () => {
     <div className="pb-24 md:pb-10">
       {!isSearching && (
         <>
+          <HeroVideoBanner />
           <BannerStrip />
           <SearchPills />
           <Marquee />
