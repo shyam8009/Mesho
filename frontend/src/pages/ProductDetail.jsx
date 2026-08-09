@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { products } from '../data/mock';
 import { Star, ShoppingCart, ChevronRight, ShieldCheck, RotateCcw, Truck, Wallet, Minus, Plus, ChevronLeft } from 'lucide-react';
@@ -13,6 +13,10 @@ const ProductDetail = () => {
   const { addToCart } = useCart();
   const [qty, setQty] = useState(1);
   const [activeImg, setActiveImg] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   // build gallery: product image + 3 images from nearby products for variety
   const gallery = useMemo(() => {
