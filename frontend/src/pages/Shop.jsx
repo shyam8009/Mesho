@@ -30,7 +30,7 @@ const useCountdown = () => {
 
 const BannerStrip = () => (
   <div className="px-3 md:px-6 pt-3 md:pt-5">
-    <BannerCarousel banners={banners} interval={4000} />
+    <BannerCarousel banners={banners} interval={6000} />
   </div>
 );
 

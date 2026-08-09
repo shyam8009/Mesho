@@ -43,7 +43,7 @@ const BannerCarousel = ({ banners = [], interval = 4000, aspectClass = 'h-40 sm:
       onTouchEnd={onTouchEnd}
     >
       <div
-        className="flex transition-transform duration-500 ease-out"
+        className="flex transition-transform duration-300 ease-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {banners.map((b, i) => (
