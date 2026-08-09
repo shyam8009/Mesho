@@ -12,6 +12,7 @@ import { Orders, Help, Account, Wishlist } from "./pages/Static";
 import Checkout from "./pages/Checkout";
 import { CartProvider } from "./context/CartContext";
 import { SearchProvider } from "./context/SearchContext";
+import ScrollToTop from "./components/ScrollToTop";
 
 function Layout({ children }) {
   return (
@@ -33,6 +34,7 @@ function App() {
       <CartProvider>
         <SearchProvider>
           <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Layout><Shop /></Layout>} />
             <Route path="/product/:id" element={<Layout><ProductDetail /></Layout>} />
